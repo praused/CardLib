@@ -5,7 +5,7 @@ using System.Text;
 
 namespace CardLib
 {
-    public class Card
+    public class Card : ICloneable
     {
         public readonly Rank rank;
         public readonly Suit suit;
@@ -24,6 +24,11 @@ namespace CardLib
         public override string ToString()
         {
             return "The " + rank + " of " + suit + "s";
+        }
+
+        public object Clone()
+        {
+            return MemberwiseClone(); //Shallow Copy
         }
     }
 }

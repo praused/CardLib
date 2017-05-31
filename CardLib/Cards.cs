@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CardLib
 {
-    public class Cards : CollectionBase
+    public class Cards : CollectionBase, ICloneable
     {
         public void Add(Card newCard)
         {
@@ -56,6 +56,16 @@ namespace CardLib
         public bool Contains(Card card)
         {
             return InnerList.Contains(card);
+        }
+
+        public object Clone() //Deep Copy
+        {
+            Cards newCards = new Cards();
+            foreach (Card sourceCard in List)
+            {
+                newCards.Add(sourceCard.Clone() as Card);
+            }
+            return newCards;
         }
     }
 }
