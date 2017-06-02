@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlushGame", "FlushGame\Flus
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeepCopyTest", "DeepCopyTest\DeepCopyTest.csproj", "{32B85767-AB36-40BF-9940-F27BF28FFE35}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OperatorOverloadTest", "OperatorOverloadTest\OperatorOverloadTest.csproj", "{C6553231-722B-4131-9C1D-747CEF27A296}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{32B85767-AB36-40BF-9940-F27BF28FFE35}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32B85767-AB36-40BF-9940-F27BF28FFE35}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32B85767-AB36-40BF-9940-F27BF28FFE35}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6553231-722B-4131-9C1D-747CEF27A296}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6553231-722B-4131-9C1D-747CEF27A296}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6553231-722B-4131-9C1D-747CEF27A296}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6553231-722B-4131-9C1D-747CEF27A296}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
