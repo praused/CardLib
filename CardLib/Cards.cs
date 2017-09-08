@@ -7,34 +7,8 @@ using System.Threading.Tasks;
 
 namespace CardLib
 {
-    public class Cards : CollectionBase, ICloneable
-    {
-        public void Add(Card newCard)
-        {
-            List.Add(newCard);
-        }
-
-        public void Remove(Card oldCard)
-        {
-            List.Remove(oldCard);
-        }
-
-        public Cards()
-        {
-        }
-        
-        public Card this[int cardIndex]
-        {
-            get
-            {
-                return (Card)List[cardIndex];
-            }
-            set
-            {
-                List[cardIndex] = value;
-            }
-        }
-        
+    public class Cards : List<Card>, ICloneable
+    {       
         /// <summary>
         /// Utility method for copying card instances into another Cards instance.
         /// Used in Deck.Shuffle().
@@ -48,20 +22,10 @@ namespace CardLib
             }
         }
 
-        /// <summary>
-        /// Check to see if the Cards collection contains a particular card.
-        /// This calls the Contains() method of the ArrayList for the collection,
-        /// which you access through the InnerList property.
-        /// </summary>
-        public bool Contains(Card card)
-        {
-            return InnerList.Contains(card);
-        }
-
         public object Clone() //Deep Copy
         {
             Cards newCards = new Cards();
-            foreach (Card sourceCard in List)
+            foreach (Card sourceCard in this)
             {
                 newCards.Add(sourceCard.Clone() as Card);
             }
