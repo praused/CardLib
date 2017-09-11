@@ -5,9 +5,13 @@ using System.Text;
 
 namespace CardLib
 {
+    public delegate void LastCardDrawnHandler(Deck currentDeck);
+
     public class Deck : ICloneable
     {
         private Cards cards = new Cards();
+
+        public event LastCardDrawnHandler LastCardDrawn;
 
         public Deck()
         {
@@ -23,9 +27,17 @@ namespace CardLib
         public Card GetCard(int cardNum)
         {
             if (cardNum >= 0 && cardNum <= 51)
+            {
+                if ((cardNum == 51) && LastCardDrawn != null)
+                {
+                    LastCardDrawn(this);
+                }
                 return cards[cardNum];
+            }
             else
+            {
                 throw new CardOutOfRangeException(cards.Clone() as Cards);
+            }
         }
 
         public void Shuffle()
