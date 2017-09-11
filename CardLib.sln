@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeepCopyTest", "DeepCopyTes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OperatorOverloadTest", "OperatorOverloadTest\OperatorOverloadTest.csproj", "{C6553231-722B-4131-9C1D-747CEF27A296}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch13CardClient", "Ch13CardClient\Ch13CardClient.csproj", "{206B9650-DBC6-49F0-8E3E-0F04CDE8EAC3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{C6553231-722B-4131-9C1D-747CEF27A296}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C6553231-722B-4131-9C1D-747CEF27A296}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C6553231-722B-4131-9C1D-747CEF27A296}.Release|Any CPU.Build.0 = Release|Any CPU
+		{206B9650-DBC6-49F0-8E3E-0F04CDE8EAC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{206B9650-DBC6-49F0-8E3E-0F04CDE8EAC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{206B9650-DBC6-49F0-8E3E-0F04CDE8EAC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{206B9650-DBC6-49F0-8E3E-0F04CDE8EAC3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
