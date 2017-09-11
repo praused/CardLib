@@ -25,8 +25,7 @@ namespace CardLib
             if (cardNum >= 0 && cardNum <= 51)
                 return cards[cardNum];
             else
-                throw new System.ArgumentOutOfRangeException("cardNum", cardNum, 
-                    "Value must be between 0 and 51.");
+                throw new CardOutOfRangeException(cards.Clone() as Cards);
         }
 
         public void Shuffle()
