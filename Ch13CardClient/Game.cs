@@ -101,12 +101,13 @@ namespace Ch13CardClient
                             do
                             {
                                 newCard = playDeck.GetCard(currentCard++);
-                                cardIsAvailable = !discardedCards.Contains(newCard); //how could it already be discarded???
+                                //newCard is in discardedCards if it was in a player's hand during last reshuffle but has since been discarded.
+                                cardIsAvailable = !discardedCards.Contains(newCard);
                                 if (cardIsAvailable)
                                 {
                                     foreach (Player testPlayer in players)
                                     {
-                                        if (testPlayer.PlayHand.Contains(newCard)) //this can happen because of reshuffling
+                                        if (testPlayer.PlayHand.Contains(newCard)) //happens when newCard has been in a player's hand since last reshuffle.
                                         {
                                             cardIsAvailable = false;
                                             break; //don't need to check anymore
