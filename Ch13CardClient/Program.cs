@@ -44,6 +44,7 @@ namespace Ch13CardClient
             newGame.SetPlayers(players);
             int whoWon = newGame.PlayGame();
             Console.WriteLine($"{players[whoWon].Name} has won the game!");
+            Console.ReadKey();
         }
     }
 }
